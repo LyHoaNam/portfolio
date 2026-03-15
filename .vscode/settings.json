@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "tailwindCSS.classFunctions": [
+    "cn",
+    "clsx",
+    "twMerge",
+    "cva"
+  ],
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}

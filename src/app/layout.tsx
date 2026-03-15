@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Black_Ops_One, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 const PORTFOLIO_TITLE = "Ly Hoa Nam | Frontend Developer";
 const PORTFOLIO_DESCRIPTION =
   "Personal portfolio of Ly Hoa Nam — a frontend developer specializing in modern web development with retro-inspired UI, interactive 3D experiences, and clean code architecture.";
+const blackOpsOne = Black_Ops_One({
+  subsets: ["latin"],
+  variable: "--font-figma-bold",
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: PORTFOLIO_TITLE,
@@ -52,7 +57,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${blackOpsOne.variable}`}
+      >
         {children}
       </body>
     </html>

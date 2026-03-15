@@ -1,11 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "tailwindCSS.classFunctions": [
-    "cn",
-    "clsx",
-    "twMerge",
-    "cva"
-  ],
+  "tailwindCSS.classFunctions": ["cn", "clsx", "twMerge", "cva"],
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
     "source.organizeImports.biome": "explicit",

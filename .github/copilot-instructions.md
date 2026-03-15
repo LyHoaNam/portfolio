@@ -7,7 +7,7 @@
 - **Framework:** Next.js 16+ + TypeScript
 - **Styling:** Tailwind CSS + custom CSS animations
 - **Package Manager:** pnpm
-- **Animation library:** Three.js, frame-motion, or custom CSS animations
+- **Animation library:** Three.js, or custom CSS animations
 
 ---
 

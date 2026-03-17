@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "biome check --write .",
     "format": "prettier --write --ignore-unknown ./src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "analyze": "next experimental-analyze"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.1",

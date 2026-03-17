@@ -411,10 +411,11 @@ Use this skill when:
 + interface OrderProcessor {
 +   process(order: Order): Result<ProcessedOrder, Error>;
 + }
+```
 
 ### Violations folder structure
-project structure standard
-```
+
+the files should be organized according to the following structure, but if there are violations of this structure, please refactor the code to fit this structure:
 
 ```
 root/

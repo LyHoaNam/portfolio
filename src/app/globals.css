@@ -9,7 +9,16 @@
   --color-cream: #fff2c6;
   --color-paper: #faf9ee;
 
+  --color-surface-canvas: #faf9ee;
+  --color-text-primary: #2d3c59;
+  --color-text-accent: #c84f5f;
+
   /* Typography */
   --tracking-hero-title: -2.56px;
   --tracking-hero-name: -1.92px;
+}
+
+@theme inline {
+  --font-primary: var(--font-black-ops-one);
+  --font-display: var(--font-black-ops-one);
 }

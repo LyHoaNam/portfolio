@@ -17,7 +17,7 @@ const PORTFOLIO_DESCRIPTION =
   "Personal portfolio of Ly Hoa Nam — a frontend developer specializing in modern web development with retro-inspired UI, interactive 3D experiences, and clean code architecture.";
 const blackOpsOne = Black_Ops_One({
   subsets: ["latin"],
-  variable: "--font-figma-bold",
+  variable: "--font-black-ops-one",
   weight: ["400"],
 });
 

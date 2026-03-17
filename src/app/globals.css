@@ -8,22 +8,8 @@
   --color-silver: #bfc6c4;
   --color-cream: #fff2c6;
   --color-paper: #faf9ee;
-}
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  /* Typography */
+  --tracking-hero-title: -2.56px;
+  --tracking-hero-name: -1.92px;
 }

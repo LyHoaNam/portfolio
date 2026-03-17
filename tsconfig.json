@@ -28,7 +28,8 @@
       "types/*": ["./src/types/*"],
       "lib/*": ["./src/lib/*"],
       "images/*": ["./src/assets/images/*"],
-      "icons/*": ["./src/assets/icons/*"]
+      "icons/*": ["./src/assets/icons/*"],
+      "features/*": ["./src/features/*"]
     },
     "baseUrl": "."
   },
@@ -39,7 +40,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "next.config.js"
+    "next.config.ts"
   ],
   "exclude": ["node_modules"]
 }

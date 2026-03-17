@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Black_Ops_One, Geist, Geist_Mono } from "next/font/google";
+import { Black_Ops_One } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const PORTFOLIO_TITLE = "Ly Hoa Nam | Frontend Developer";
 const PORTFOLIO_DESCRIPTION =
@@ -57,11 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${blackOpsOne.variable}`}
-      >
-        {children}
-      </body>
+      <body className={`${blackOpsOne.variable}`}>{children}</body>
     </html>
   );
 }

@@ -1,4 +1,6 @@
-import { IntroduceBubble } from "@src/features/introduce/components/IntroduceBubble";
+import { VisibleOnScreen } from "components/ui/VisibleOnScreen";
+import { IntroduceBubble } from "features/introduce/components/IntroduceBubble";
+import { ThreeDSceneContainer } from "features/threeDimension/components/Scene3DContainer";
 import avatar0 from "images/avatar0.png";
 import avatar1 from "images/avatar1.png";
 import avatar2 from "images/avatar2.png";
@@ -8,7 +10,6 @@ import Image from "next/image";
 
 const DEFAULT_AVATAR_INDEX = 0;
 const AVATARS = [avatar0, avatar1, avatar2, avatar3, avatar4] as const;
-const _AVATAR_PLACEHOLDER_SRC = "/avatar_placeholder.png";
 
 export const Hero = () => {
   return (
@@ -39,12 +40,12 @@ export const Hero = () => {
           </h1>
         </div>
 
-        {/* <VisibleOnScreen
+        <VisibleOnScreen
           className="absolute bottom-12.5 left-0 h-250 w-250"
           threshold={0.1}
         >
-          <div>Scene3DContainer</div>
-        </VisibleOnScreen> */}
+          <ThreeDSceneContainer />
+        </VisibleOnScreen>
       </div>
     </section>
   );

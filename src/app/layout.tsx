@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Black_Ops_One } from "next/font/google";
 import "./globals.css";
+import Navigation from "@src/components/ui/Navigation";
 
 const PORTFOLIO_TITLE = "Ly Hoa Nam | Frontend Developer";
 const PORTFOLIO_DESCRIPTION =
@@ -47,7 +48,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${blackOpsOne.variable}`}>{children}</body>
+      <body className={`${blackOpsOne.variable}`}>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }

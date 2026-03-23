@@ -1,9 +1,9 @@
 "use client";
 
+import { ThreeDSceneProvider } from "@src/features/threeDimension/hooks/useThreeDSceneContext";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import { ErrorBoundary, type FallbackProps } from "react-error-boundary";
-import { ThreeDSceneProvider } from "@src/features/threeDimension/hooks/useThreeDSceneContext";
 
 // Dynamically import ThreeDCanvas for code-splitting
 const ThreeDCanvas = dynamic(
@@ -19,17 +19,11 @@ interface Scene3DContainerProps {
   onLaptopSelect?: () => void;
 }
 
-function Scene3DFallback() {
-  return (
-    <div className="flex h-full w-full items-center justify-center">
-      <div className="animate-pulse text-retro-electric">
-        Loading 3D Scene...
-      </div>
-    </div>
-  );
-}
+const Scene3DFallback = () => {
+  return <div></div>;
+};
 
-function Scene3DErrorFallback({ error }: FallbackProps) {
+const Scene3DErrorFallback = ({ error }: FallbackProps) => {
   void error;
 
   return (
@@ -37,12 +31,12 @@ function Scene3DErrorFallback({ error }: FallbackProps) {
       <div className="text-retro-pink">3D Scene temporarily unavailable</div>
     </div>
   );
-}
+};
 
-export default function ThreeDSceneContainer({
+export const ThreeDSceneContainer = ({
   onLaptopHoverChange,
   onLaptopSelect,
-}: Scene3DContainerProps) {
+}: Scene3DContainerProps) => {
   return (
     <div className="h-full w-full">
       <ThreeDSceneProvider
@@ -57,6 +51,4 @@ export default function ThreeDSceneContainer({
       </ThreeDSceneProvider>
     </div>
   );
-}
-
-export { ThreeDSceneContainer };
+};

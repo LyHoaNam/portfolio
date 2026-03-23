@@ -1,15 +1,4 @@
-import { VisibleOnScreen } from "components/ui/VisibleOnScreen";
-import { IntroduceBubble } from "features/introduce/components/IntroduceBubble";
-import { ThreeDSceneContainer } from "features/threeDimension/components/Scene3DContainer";
-import avatar0 from "images/avatar0.png";
-import avatar1 from "images/avatar1.png";
-import avatar2 from "images/avatar2.png";
-import avatar3 from "images/avatar3.png";
-import avatar4 from "images/avatar4.png";
-import Image from "next/image";
-
-const DEFAULT_AVATAR_INDEX = 0;
-const AVATARS = [avatar0, avatar1, avatar2, avatar3, avatar4] as const;
+import { HeroClientSection } from "features/introduce/components/HeroClientSection";
 
 export const Hero = () => {
   return (
@@ -26,26 +15,7 @@ export const Hero = () => {
           </h2>
         </div>
 
-        <div className="relative">
-          <IntroduceBubble className="-top-2" />
-          <Image
-            src={AVATARS[DEFAULT_AVATAR_INDEX]}
-            alt="LyHoaNam - Frontend Developer"
-            width={350}
-            height={350}
-            preload
-          />
-          <h1 className="mt-0 font-display text-5xl text-text-accent uppercase leading-10">
-            LY HOA NAM
-          </h1>
-        </div>
-
-        <VisibleOnScreen
-          className="absolute bottom-12.5 left-0 h-250 w-250"
-          threshold={0.1}
-        >
-          <ThreeDSceneContainer />
-        </VisibleOnScreen>
+        <HeroClientSection />
       </div>
     </section>
   );

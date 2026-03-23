@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-type TypographyVariant = "body" | "heading" | "subheading" | "mono";
+type TypographyVariant = "body" | "heading" | "subheading" | "mono" | "title";
 type TypographySize = "sm" | "md" | "lg" | "xl" | "hero";
 type TypographyElement = "div" | "h1" | "h2" | "h3" | "p" | "span";
 
@@ -18,6 +18,7 @@ const DEFAULT_ELEMENT_BY_VARIANT: Record<TypographyVariant, TypographyElement> =
     heading: "h2",
     subheading: "h3",
     mono: "p",
+    title: "h3",
   };
 
 const VARIANT_STYLES: Record<TypographyVariant, string> = {
@@ -25,6 +26,7 @@ const VARIANT_STYLES: Record<TypographyVariant, string> = {
   heading: "font-display text-text-primary uppercase tracking-hero-name",
   subheading: "font-display text-text-primary uppercase tracking-wide",
   mono: "font-mono text-text-primary",
+  title: "font-bold text-text-primary",
 };
 
 const SIZE_STYLES: Record<TypographySize, string> = {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Black_Ops_One } from "next/font/google";
 import "./globals.css";
 import Navigation from "@src/components/ui/Navigation";
+import { FloatingContact } from "@src/features/contact/components/FloatingContact";
 
 const PORTFOLIO_TITLE = "Ly Hoa Nam | Frontend Developer";
 const PORTFOLIO_DESCRIPTION =
@@ -50,6 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${blackOpsOne.variable}`}>
         <Navigation />
+        <FloatingContact />
         {children}
       </body>
     </html>

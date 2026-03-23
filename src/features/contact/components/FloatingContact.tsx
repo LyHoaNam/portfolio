@@ -76,7 +76,7 @@ export const FloatingContact = () => {
 
   return (
     <div
-      className="absolute top-12.5 left-0 z-40"
+      className="fixed top-12.5 left-0 z-40"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

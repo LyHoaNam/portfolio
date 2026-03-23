@@ -9,8 +9,8 @@ export const SECTION_HASHES = {
 export const NAV_ITEMS = [
   { label: "Home", href: SECTION_HASHES.HOME },
   { label: "Skills", href: SECTION_HASHES.SKILLS },
-  { label: "Experience", href: SECTION_HASHES.EXPERIENCE },
   { label: "About", href: SECTION_HASHES.ABOUT },
+  { label: "Experience", href: SECTION_HASHES.EXPERIENCE },
   { label: "Contact", href: SECTION_HASHES.CONTACT },
 ] as const;
 

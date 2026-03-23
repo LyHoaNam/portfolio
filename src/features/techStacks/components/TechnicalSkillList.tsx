@@ -13,13 +13,16 @@ export const TechnicalSkillList = () => {
           >
             {skillGroup.category}
           </Typography>
-          <Typography
-            variant="mono"
-            size="sm"
-            className="text-retro-navy text-xs leading-snug md:text-sm"
-          >
-            {skillGroup.items.join(" • ")}
-          </Typography>
+          {skillGroup.items.map((skill) => (
+            <Typography
+              key={skill}
+              variant="mono"
+              size="sm"
+              className="text-retro-navy text-xs leading-snug md:text-sm"
+            >
+              • {skill}
+            </Typography>
+          ))}
         </section>
       ))}
     </div>

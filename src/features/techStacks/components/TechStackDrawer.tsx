@@ -2,6 +2,7 @@
 
 import { TechnicalSkillList } from "@src/features/techStacks/components/TechnicalSkillList";
 import { useTechStackDrawer } from "@src/features/techStacks/hooks/useTechStackDrawer";
+import { Button } from "components/ui/Button";
 import { Typography } from "components/ui/Typography";
 
 export const TechStackDrawer = () => {
@@ -12,7 +13,7 @@ export const TechStackDrawer = () => {
       role="dialog"
       aria-modal="true"
       aria-label="Technical skills"
-      className={`fixed top-0 right-0 z-50 h-screen w-[min(96vw,42rem)] border-retro-slate border-l-2 bg-cream transition-transform duration-300 ease-out ${
+      className={`fixed top-0 right-0 z-50 h-screen w-[min(96vw,42rem)] border-l-2 bg-cream transition-transform duration-300 ease-out ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -21,14 +22,7 @@ export const TechStackDrawer = () => {
           <Typography variant="heading" size="lg">
             Technical Skills
           </Typography>
-          <button
-            type="button"
-            onClick={handleClose}
-            className="retro-button px-3 py-1 text-xs"
-            aria-label="Close technical skills drawer"
-          >
-            CLOSE
-          </button>
+          <Button onClick={handleClose}>CLOSE</Button>
         </div>
 
         <TechnicalSkillList />

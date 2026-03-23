@@ -22,17 +22,23 @@ export const IntroduceImage = ({
   defaultAvatarIndex,
 }: IntroduceImageProps) => {
   const [randAvatar, setRandAvatar] = useState<AvatarIndex>(defaultAvatarIndex);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    if (isHovering) {
-      const randomIndex = (
-        Math.floor(Math.random() * (AVATARS.length - 1)) + 1
-      ) as AvatarIndex;
-      setRandAvatar(randomIndex);
-      return;
-    }
+    setIsVisible(false);
 
-    setRandAvatar(defaultAvatarIndex);
+    const timer = setTimeout(() => {
+      if (isHovering) {
+        const randomIndex = (Math.floor(Math.random() * (AVATARS.length - 1)) +
+          1) as AvatarIndex;
+        setRandAvatar(randomIndex);
+      } else {
+        setRandAvatar(defaultAvatarIndex);
+      }
+      setIsVisible(true);
+    }, 150);
+
+    return () => clearTimeout(timer);
   }, [defaultAvatarIndex, isHovering]);
 
   return (
@@ -42,6 +48,7 @@ export const IntroduceImage = ({
       width={350}
       height={350}
       preload
+      className={`transition-opacity duration-150 ${isVisible ? "opacity-100" : "opacity-0"}`}
     />
   );
 };

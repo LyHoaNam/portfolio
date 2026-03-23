@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 type TypographyVariant = "body" | "heading" | "subheading" | "mono";
-type TypographySize = "sm" | "md" | "lg" | "xl";
+type TypographySize = "sm" | "md" | "lg" | "xl" | "hero";
 type TypographyElement = "div" | "h1" | "h2" | "h3" | "p" | "span";
 
 interface TypographyProps {
@@ -32,6 +32,7 @@ const SIZE_STYLES: Record<TypographySize, string> = {
   md: "text-base",
   lg: "text-2xl leading-tight",
   xl: "text-4xl leading-none",
+  hero: "text-6xl leading-none md:text-8xl",
 };
 
 const getTypographyClassName = ({

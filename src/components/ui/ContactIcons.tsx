@@ -1,3 +1,6 @@
+import type { TypeContactItemId } from "@src/utils/contact";
+import type { ComponentType } from "react";
+
 export interface TypeIconProps {
   size?: number;
 }
@@ -69,3 +72,13 @@ export const LinkedInIcon = ({ size = 16 }: TypeIconProps) => (
     <circle cx="4" cy="4" r="2" />
   </svg>
 );
+
+export const CONTACT_ICON_MAP: Record<
+  TypeContactItemId,
+  ComponentType<TypeIconProps>
+> = {
+  phone: PhoneIcon,
+  email: EmailIcon,
+  location: LocationIcon,
+  linkedin: LinkedInIcon,
+};

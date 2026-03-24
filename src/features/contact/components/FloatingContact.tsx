@@ -1,26 +1,9 @@
 "use client";
 
-import type { TypeIconProps } from "@src/components/ui/ContactIcons";
-import {
-  EmailIcon,
-  LinkedInIcon,
-  LocationIcon,
-  PhoneIcon,
-} from "@src/components/ui/ContactIcons";
+import { CONTACT_ICON_MAP } from "@src/components/ui/ContactIcons";
 import type { TypeContactItemId } from "@src/utils/contact";
 import { CONTACT_ITEMS } from "@src/utils/contact";
-import type { ComponentType } from "react";
 import { useState } from "react";
-
-const CONTACT_ICON_MAP: Record<
-  TypeContactItemId,
-  ComponentType<TypeIconProps>
-> = {
-  phone: PhoneIcon,
-  email: EmailIcon,
-  location: LocationIcon,
-  linkedin: LinkedInIcon,
-};
 
 interface TypeContactDetailRowProps {
   id: TypeContactItemId;

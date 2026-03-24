@@ -1,9 +1,15 @@
+"use client";
+
+import { useHeroScrollState } from "@src/hooks/useHeroScrollState";
 import { HeroClientSection } from "features/introduce/components/HeroClientSection";
 
 export const Hero = () => {
+  const { overlayOpacity, isHidden } = useHeroScrollState();
+
   return (
     <section
-      className={`sticky min-h-screen w-full overflow-hidden bg-surface-canvas`}
+      aria-hidden={isHidden}
+      className={`${isHidden ? "relative" : "sticky top-0"} z-2 min-h-screen w-full overflow-hidden bg-surface-canvas`}
     >
       <div className="relative mx-auto flex h-screen w-87.5 items-end">
         <div className="absolute bottom-1 left-0 origin-bottom-left -rotate-90">
@@ -15,8 +21,15 @@ export const Hero = () => {
           </h2>
         </div>
 
-        <HeroClientSection />
+        {!isHidden && <HeroClientSection />}
       </div>
+
+      {/* Scroll-driven black overlay — GPU composited, never blocks pointer events */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-1 bg-black"
+        style={{ opacity: overlayOpacity, willChange: "opacity" }}
+      />
     </section>
   );
 };

@@ -1,8 +1,8 @@
 export const PROFILE = {
-  phone: "+84 123 456 789",
-  email: "lyhoanan@example.com",
-  location: "Ho Chi Minh City, Vietnam",
-  linkedin: "https://linkedin.com/in/lyhoanam",
+  phone: "0338463252",
+  email: "lyhoanam@gmail.com",
+  location: "TP. HCM",
+  linkedin: "https://www.linkedin.com/in/nam-ly-587130208/",
   linkedinHandle: "lyhoanam",
 } as const;
 

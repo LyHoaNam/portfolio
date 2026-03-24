@@ -71,7 +71,7 @@ const TimelineItem = ({
         </Typography>
 
         <div className="flex flex-wrap gap-3 text-sm">
-          <span className="font-mono text-slate tracking-wide">{period}</span>
+          <span className="font-mono text-blue tracking-wide">{period}</span>
           <span className="text-navy/60">•</span>
           <span className="font-semibold text-navy/80">{role}</span>
         </div>

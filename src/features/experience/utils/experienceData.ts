@@ -12,7 +12,7 @@ export const EXPERIENCE_ITEMS: TypeExperienceItem[] = [
     id: "tool-help-platform-enablement",
     company: "Tool Help Company",
     project: "Internal Tools / Frontend Platform Enablement",
-    period: "2022 - 2026",
+    period: "2022 - present",
     role: "Problem Discovery to Implementation",
     highlights: [
       "Built from scratch: Chrome Extension to upload image/video attachments to S3 instead of local backlog storage",

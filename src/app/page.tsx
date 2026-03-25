@@ -1,4 +1,5 @@
 import { Hero } from "@src/components/layout/Hero";
+import { FloatingScrollButton } from "@src/components/ui/FloatingScrollButton";
 import { About } from "@src/features/about/components/About";
 import { Contact } from "@src/features/contact/components/Contact";
 import { FloatingCVDownloadDynamic } from "@src/features/contact/components/FloatingCVDownloadDynamic";
@@ -14,6 +15,7 @@ const Portfolio = () => {
       </div>
       <Contact />
       <FloatingCVDownloadDynamic />
+      <FloatingScrollButton />
     </main>
   );
 };

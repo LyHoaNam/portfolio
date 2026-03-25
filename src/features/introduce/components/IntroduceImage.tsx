@@ -48,7 +48,7 @@ export const IntroduceImage = ({
       width={350}
       height={350}
       preload
-      className={`transition-opacity duration-150 ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`h-50 w-50 transition-opacity duration-150 md:h-87.5 md:w-87.5 ${isVisible ? "opacity-100" : "opacity-0"}`}
     />
   );
 };

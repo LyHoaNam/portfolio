@@ -26,13 +26,13 @@ export const HeroClientSection = () => {
           isHovering={isLaptopHovered}
           defaultAvatarIndex={DEFAULT_AVATAR_INDEX}
         />
-        <h1 className="mt-0 font-display text-5xl text-text-accent uppercase leading-10">
+        <h1 className="mt-0 font-display text-3xl text-text-accent uppercase leading-8 md:text-5xl md:leading-10">
           LY HOA NAM
         </h1>
       </div>
 
       <VisibleOnScreen
-        className="absolute bottom-12.5 left-0 h-250 w-250"
+        className="absolute bottom-12.5 left-0 hidden h-250 w-250 md:block"
         threshold={0.1}
       >
         <ThreeDSceneContainer

@@ -1,11 +1,8 @@
 "use client";
 
 import { Typography } from "@src/components/ui/Typography";
-import { useSectionVisibility } from "@src/hooks/useSectionVisibility";
-import Work from "images/work.png";
-import Image from "next/image";
-import type { RefObject } from "react";
 
+import { ExperienceImageCallout } from "./ExperienceImageCallout";
 import {
   EXPERIENCE_ITEMS,
   type TypeExperienceItem,
@@ -24,32 +21,13 @@ const TimelineItem = ({
   highlights,
   isLast = false,
 }: TypeTimelineItemProps) => {
-  const { isVisible: isDotCentered, sectionRef } = useSectionVisibility(0.5);
-
   return (
     <div className="relative pb-16 pl-12 last:pb-0">
       {/* Work image callout — fades in when dot is centred in viewport */}
-      <div
-        aria-hidden="true"
-        className={`pointer-events-none absolute -top-7 right-full z-10 mr-5 hidden transition-all duration-500 ease-out lg:block ${
-          isDotCentered
-            ? "translate-x-0 opacity-100"
-            : "translate-x-4 opacity-0"
-        }`}
-      >
-        <Image
-          src={Work}
-          alt=""
-          width={180}
-          height={180}
-          className="h-auto w-28 xl:w-36"
-        />
-      </div>
 
       {/* Timeline dot */}
       <div
         id={`timeline-dot-${id}`}
-        ref={sectionRef as RefObject<HTMLDivElement>}
         className="absolute top-2 left-0 h-4 w-4 rounded-full border-4 border-navy bg-mint shadow-lg"
       />
 
@@ -97,6 +75,7 @@ export const Experience = () => (
     id="experience"
     className="relative flex min-h-screen items-center justify-center overflow-hidden bg-surface-canvas px-6 py-24"
   >
+    <ExperienceImageCallout />
     <div className="w-full max-w-4xl">
       <div className="mb-16">
         {/* section_03 */}

@@ -3,6 +3,8 @@ import { Typography } from "@src/components/ui/Typography";
 import type { TypeContactItem } from "@src/utils/contact";
 import { CONTACT_ITEMS, PROFILE } from "@src/utils/contact";
 
+import { ContactImageCallout } from "./ContactImageCallout";
+
 const ContactCard = ({ id, href, label, isExternal }: TypeContactItem) => {
   const Icon = CONTACT_ICON_MAP[id];
 
@@ -38,15 +40,18 @@ export const Contact = () => (
     className="sticky bottom-0 grid h-175 w-full place-items-center overflow-hidden bg-black"
   >
     <div className="w-full max-w-3xl px-8 text-center">
-      <Typography
-        as="h2"
-        variant="mono"
-        size="hero"
-        color="inverse"
-        className="mb-6 whitespace-pre-line"
-      >
-        {"Let's work\ntogether"}
-      </Typography>
+      <div className="relative inline-block">
+        <ContactImageCallout />
+        <Typography
+          as="h2"
+          variant="mono"
+          size="hero"
+          color="inverse"
+          className="mb-6 whitespace-pre-line"
+        >
+          {"Let's work\ntogether"}
+        </Typography>
+      </div>
 
       <p className="mb-1 font-mono text-white/40 text-xs uppercase tracking-widest">
         Connect with me:
